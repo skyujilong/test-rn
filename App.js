@@ -1,4 +1,3 @@
-import {App} from './src/demo1';
-console.log(App);
-console.log(123);
+// import {App} from './src/demo1';
+import {App} from './src/animate';
 export default App;

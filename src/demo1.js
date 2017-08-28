@@ -67,7 +67,7 @@ export class App extends React.Component {
                                 height: 54
                             }} source={{
                                 uri: 'http://www.alloyteam.com/wp-content/uploads/2015/07/logo-e1485056491948.png'
-                            }}></Image>
+                            }}/>
                         </View>
 
                         <View>
