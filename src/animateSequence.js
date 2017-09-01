@@ -37,7 +37,8 @@ export class App extends React.Component {
     }
     render(){
         let {left,rotate} = this.state;
-        //debugger;
+        //TODO 这里 通过StyleSheet.create出来的style样式文件
+        //都是一个id的标志，这里用assign的方法去集成原来的样式就会产生问题
         let imgStyles = Object.assign({
             width:48,
             height:56
