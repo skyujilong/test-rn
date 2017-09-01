@@ -108,6 +108,7 @@ export class App extends React.Component {
                     <Text onPress={(el) => {
                         this.press(el)
                     }} style={styles.topic}>大和大和</Text>
+                    {/* 像这种点击不应该用这个应该采用 Touchables 相关的组件封装出来一个 按钮组件*/}
                     <Text onPress={(el) => {
                         this.press(el)
                     }} style={styles.topic}>大和大和</Text>
