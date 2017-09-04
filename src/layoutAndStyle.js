@@ -11,6 +11,8 @@ import {
     Image,
     PixelRatio
 } from 'react-native';
+import {TopicBtn} from './ui/topicBtn';
+
 
 const styles = StyleSheet.create({
     container:{
@@ -44,9 +46,9 @@ const styles = StyleSheet.create({
         // height:100,
         flexDirection:'row',
         backgroundColor:'#efefef',
-        alignItems:'center', //规定子元素在交叉轴上如何对齐
         flexWrap:'wrap',//子元素排满父元素换行
-        //justifyContent:'space-around', 属性定义了项目(子元素)在主轴上的对齐方式。
+        justifyContent:'flex-start',// 属性定义了项目(子元素)在主轴上的对齐方式。
+        alignItems:'center', //规定子元素在交叉轴上如何对齐
         paddingTop:24,
         paddingBottom:24,
         paddingLeft:32,
@@ -57,8 +59,11 @@ const styles = StyleSheet.create({
         fontSize:32/2,
         fontWeight:'200',
         textAlign:'center',
+        textAlignVertical:'center', //not work in ios
         height:64/2,
-        lineHeight:30,
+        justifyContent:'center',
+        alignItems:'center',
+        // lineHeight:30,
         paddingLeft:15/2,
         paddingRight:15/2,
         borderWidth:1/PixelRatio.get(),
@@ -107,11 +112,12 @@ export class App extends React.Component {
                     }} style={styles.topic}>大和大和</Text>
                     <Text onPress={(el) => {
                         this.press(el)
-                    }} style={styles.topic}>大和大和</Text>
+                    o}} style={styles.topic}>大和大和</Text>
                     {/* 像这种点击不应该用这个应该采用 Touchables 相关的组件封装出来一个 按钮组件*/}
                     <Text onPress={(el) => {
                         this.press(el)
                     }} style={styles.topic}>大和大和</Text>
+                    <TopicBtn/>
                 </View>
             </View>
         );
